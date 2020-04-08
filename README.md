@@ -32,7 +32,7 @@ This approach is useful when you need to create a package that does not require 
 Note that the following files have been modified slightly -
 * gradlew
 * gradlew.bat 
-* gradle-wrapper.properties 
+* gradle/wrapper/gradle-wrapper.properties 
 * gradle.properties 
 * settings.gradle
 * build.gradle
@@ -42,10 +42,15 @@ An example Entity is included in this project. It also includes an mlcp task (an
 To merge this approach with your existing datahub project, you would typically -
 
 1. Replace the following directories with the existing ones from your project -
-    * plugins
-    * src/main/hub-internal-config
+    * entities
+    * flows
+    * mappings
+    * step-definitions
     * src/main/entity-config
+    * src/main/hub-internal-config
     * src/main/ml-config
+    * src/main/ml-modules
+    * src/main/ml-schemas
 
 2. Merge the following files with the configuration from your existing project -
     * gradle.properties 
@@ -56,7 +61,7 @@ To merge this approach with your existing datahub project, you would typically -
 
 ## Requirements
 
-* Java 8/9
+* Java 8/11
 * Internet connection (for creation of zip only)
 
 
