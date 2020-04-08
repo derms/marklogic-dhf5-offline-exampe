@@ -109,7 +109,7 @@ task makeOfflineZip(type: Zip, dependsOn: downloadToProjectMavenRepo) {
 task mlcpExample(type: com.marklogic.gradle.task.MlcpTask) {
 	classpath = configurations.mlcp
 	command = "IMPORT"
-	port = Integer.parseInt(mlStagingPort)
+	port = mlStagingPort as int
 	input_file_path = "data/sample.csv" //assumes a csv file exists at "data/sample.csv" 
 	input_file_type = "delimited_text"
 	delimiter = ";"
